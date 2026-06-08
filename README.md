@@ -8,7 +8,7 @@
   <a href="https://leetcode.com/u/vaibhav125s/" target="_blank"> 
     <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode Profile"/> 
   </a>  
-  &nbsp;
+  &nbsp; 
   
   <a href="https://www.linkedin.com/in/vaibhavsingh125/" target="_blank"> 
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Profile"/> 
