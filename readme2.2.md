@@ -31,7 +31,7 @@
 ---
  
 ## 👋 About Me
-
+ 
 I'm a **Full-Stack Web Developer** who ships real, working products - not demos.
 
 Right now I'm building **[Medstocksy](https://medstocksy.in)**, a production pharmacy inventory & POS SaaS in **React + TypeScript** on **Supabase (PostgreSQL)**, with Google OAuth, row-level security, and a relational schema for products, batches, customers, and bills.
