@@ -4,7 +4,7 @@
 
 ### Full-Stack Developer · React · TypeScript · Supabase · LLM Integration
 
-📍 Lucknow, India &nbsp;·&nbsp; 🎓 BCA · Graduating May 2026 &nbsp;·&nbsp; ✅ Available immediately
+📍 Lucknow, India &nbsp;·&nbsp; 🎓 BCA · Graduating May 2026 &nbsp;·&nbsp; ✅ Available immediately 
 
 <br/>
  
