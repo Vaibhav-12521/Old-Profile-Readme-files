@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 560" width="600" height="560" role="img" aria-label="About Vaibhav: freelance full-stack developer building Medstocksy, 2 live client apps, Technex and Techfest hackathon awards, open to full-time roles">
+  
+  <defs>
+    <filter id="sh" x="-10%" y="-20%" width="120%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#3b2a1a" flood-opacity=".32"/></filter>
+    <filter id="shs" x="-10%" y="-20%" width="120%" height="150%"><feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#3b2a1a" flood-opacity=".3"/></filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .3  0 0 0 0 .22  0 0 0 0 .15  0 0 0 .09 0"/></filter>
+  </defs>
+  <g filter="url(#sh)"><path d="M 24 28 L 47 22.0005400194789 L 70 31.076107381878472 L 93 23.13676723145729 L 116 32.646859102718004 L 139 22.760939381439677 L 162 31.108183856638234 L 185 22.246078518799543 L 208 32.841665463914005 L 231 23.87145200272624 L 254 32.493809819917104 L 277 24.4616433468003 L 300 33.83972967268886 L 323 22.33660888175322 L 346 33.38547562639484 L 369 22.688852818072238 L 392 31.54931334012622 L 415 23.30930750132972 L 438 31.531174848569172 L 461 24.45567990208775 L 484 32.612114388780725 L 507 23.806532237588677 L 530 33.387317152874225 L 553 23.639388357121213 L 576 32.200118136219736 L 576 532 L 553 536.6144845549085 L 530 528.6419143465542 L 507 537.6544225377285 L 484 528.879591601379 L 461 536.2960443772823 L 438 528.6178489833222 L 415 535.1878626962135 L 392 527.4083352617027 L 369 537.8907434371722 L 346 528.7249485541716 L 323 535.2103499636103 L 300 527.351838397026 L 277 536.3479388157594 L 254 527.8076764693519 L 231 535.6184203981508 L 208 527.7916317199318 L 185 535.9543168935712 L 162 527.2040302512255 L 139 536.1364323464858 L 116 528.0184473861095 L 93 535.0452183420049 L 70 526.9846740765425 L 47 536.4172044510102 L 24 527.9552081282974 Z" fill="#e76f51" transform="translate(7 7)"/></g>
+  <g filter="url(#sh)"><path id="note" d="M 24 28 L 47 22.0005400194789 L 70 31.076107381878472 L 93 23.13676723145729 L 116 32.646859102718004 L 139 22.760939381439677 L 162 31.108183856638234 L 185 22.246078518799543 L 208 32.841665463914005 L 231 23.87145200272624 L 254 32.493809819917104 L 277 24.4616433468003 L 300 33.83972967268886 L 323 22.33660888175322 L 346 33.38547562639484 L 369 22.688852818072238 L 392 31.54931334012622 L 415 23.30930750132972 L 438 31.531174848569172 L 461 24.45567990208775 L 484 32.612114388780725 L 507 23.806532237588677 L 530 33.387317152874225 L 553 23.639388357121213 L 576 32.200118136219736 L 576 532 L 553 536.6144845549085 L 530 528.6419143465542 L 507 537.6544225377285 L 484 528.879591601379 L 461 536.2960443772823 L 438 528.6178489833222 L 415 535.1878626962135 L 392 527.4083352617027 L 369 537.8907434371722 L 346 528.7249485541716 L 323 535.2103499636103 L 300 527.351838397026 L 277 536.3479388157594 L 254 527.8076764693519 L 231 535.6184203981508 L 208 527.7916317199318 L 185 535.9543168935712 L 162 527.2040302512255 L 139 536.1364323464858 L 116 528.0184473861095 L 93 535.0452183420049 L 70 526.9846740765425 L 47 536.4172044510102 L 24 527.9552081282974 Z" fill="#fffaf2"/></g>
+  <clipPath id="noteclip"><use href="#note"/></clipPath>
+  <g transform="rotate(-6 120 25)"><rect x="60" y="10" width="120" height="30" fill="#2a9d8f" opacity=".6"/></g>
+  <g transform="rotate(5 480 25)"><rect x="420" y="10" width="120" height="30" fill="#e9c46a" opacity=".7"/></g>
+  <g font-family="'Trebuchet MS','Segoe UI',Helvetica,Arial,sans-serif" font-size="29" fill="#1f2d33">
+    <text x="70" y="92"><tspan>🛠️<animate attributeName="dy" values="0;-3;0" dur="2.4s" begin="0s" repeatCount="indefinite"/></tspan><tspan dx="14"><tspan>Freelance full-stack dev building</tspan></tspan></text>
+    <text x="116.4" y="132"><tspan font-weight="800" fill="#e76f51">Medstocksy</tspan><tspan>, a pharmacy SaaS</tspan></text>
+    <text x="70" y="198"><tspan>⚡<animate attributeName="dy" values="0;-3;0" dur="2.4s" begin="0.4s" repeatCount="indefinite"/></tspan><tspan dx="14"><tspan>2 live client apps, 13+ builds</tspan></tspan></text>
+    <text x="116.4" y="238"><tspan font-weight="800" fill="#e76f51">real-time · multi-tenant · AI</tspan></text>
+    <text x="70" y="304"><tspan>🏆<animate attributeName="dy" values="0;-3;0" dur="2.4s" begin="0.8s" repeatCount="indefinite"/></tspan><tspan dx="14"><tspan>Technex '25 🥈 · Techfest '25 🥇</tspan></tspan></text>
+    <text x="116.4" y="344"><tspan font-weight="800" fill="#e76f51">Google GenAI Exchange</tspan></text>
+    <text x="70" y="410"><tspan>🟢<animate attributeName="dy" values="0;-3;0" dur="2.4s" begin="1.2000000000000002s" repeatCount="indefinite"/></tspan><tspan dx="14"><tspan>BCA grad 2026, open to work,</tspan></tspan></text>
+    <text x="116.4" y="450"><tspan font-weight="800" fill="#e76f51">ready now</tspan></text>
+    
+  </g>
+  <g clip-path="url(#noteclip)"><rect width="600" height="560" filter="url(#grain)" pointer-events="none"/></g>
+</svg>
