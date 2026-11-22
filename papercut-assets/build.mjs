@@ -266,6 +266,7 @@ const files = [
   ...PROJECTS.map((p, i) => [p[0], card(p, i)]),
   ["now", now()],
   ...BUTTONS.map((b, i) => [b[0], button(b, i)]),
+  ["btn-graph", button(["btn-graph", "📈", "explore graph", C.teal], 4)],
   ["footer", footer(1200, 170, 22, 3)],
   ["footer-mobile", footer(600, 220, 30, 2)],
 ];

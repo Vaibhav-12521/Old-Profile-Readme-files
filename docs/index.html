@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vaibhav's Contributions</title>
+<meta name="description" content="Vaibhav Singh's GitHub contributions over 7 days, 30 days and all time.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e76f51'/%3E%3Cpath d='M5 24 C10 24 11 12 16 12 S22 20 27 8' fill='none' stroke='%23fffaf2' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --paper: #f6efe3; --white: #fffaf2; --mustard: #e9c46a; --orange: #f4a261; --coral: #e76f51;
+    --teal: #2a9d8f; --deep: #264653; --ink: #1f2d33; --muted: #6b5a48; --bg: #ece2d0;
+    --font: "Trebuchet MS", "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink); font-family: var(--font); display: grid; place-items: center; padding: 24px 16px; }
+  .card { width: min(1000px, 100%); background: var(--paper); border-radius: 24px; padding: 28px clamp(16px, 4vw, 40px) 22px; box-shadow: 0 2px 0 #d8ccb6, 0 18px 40px rgba(59, 42, 26, .18); position: relative; overflow: hidden; }
+  .card::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .22 0 0 0 0 .15 0 0 0 .12 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+  h1 { margin: 0; font-size: 15px; letter-spacing: .14em; color: var(--teal); }
+  .sub { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
+  .tabs { display: flex; gap: 8px; padding: 4px; }
+  .tab { font: 800 15px var(--font); color: var(--deep); background: var(--white); border: 0; border-radius: 999px; padding: 10px 18px; cursor: pointer; box-shadow: 0 2px 4px rgba(59, 42, 26, .25); transition: transform .15s, background .2s, color .2s; }
+  .tab:hover { transform: translateY(-2px); }
+  .tab[aria-selected="true"] { background: var(--coral); color: var(--white); }
+  .tab:focus-visible, .chart:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 22px 0 6px; }
+  .stat b { display: block; font-size: clamp(22px, 4vw, 30px); color: var(--deep); }
+  .stat:first-child b { color: var(--coral); }
+  .stat span { font-size: 13px; color: var(--muted); }
+  .chart-wrap { position: relative; }
+  .chart { display: block; width: 100%; height: auto; touch-action: pan-y; border-radius: 12px; }
+  .tip { position: absolute; pointer-events: none; transform: translate(-50%, calc(-100% - 14px)); background: var(--deep); color: var(--white); padding: 8px 12px; border-radius: 10px; font-size: 13px; white-space: nowrap; box-shadow: 0 6px 16px rgba(38, 70, 83, .35); opacity: 0; transition: opacity .12s; z-index: 2; }
+  .tip b { font-size: 17px; color: var(--mustard); }
+  .tip::after { content: ""; position: absolute; left: 50%; bottom: -6px; width: 12px; height: 12px; background: var(--deep); transform: translateX(-50%) rotate(45deg); }
+  .tip.show { opacity: 1; }
+  footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-top: 10px; font-size: 12px; color: var(--muted); }
+  footer a { color: var(--deep); font-weight: 700; }
+  .error { padding: 40px 0; text-align: center; color: var(--coral); font-weight: 700; }
+  @media (max-width: 560px) { .tab { padding: 9px 13px; font-size: 14px; } .stats { gap: 6px; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<main class="card">
+  <header>
+    <div>
+      <h1>CONTRIBUTIONS</h1>
+      <p class="sub">Vaibhav Singh on GitHub · hover or tap the graph</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Time period">
+      <button class="tab" role="tab" id="tab-7" aria-selected="true" aria-controls="panel" data-range="7">7 Days</button>
+      <button class="tab" role="tab" id="tab-30" aria-selected="false" aria-controls="panel" data-range="30" tabindex="-1">1 Month</button>
+      <button class="tab" role="tab" id="tab-all" aria-selected="false" aria-controls="panel" data-range="all" tabindex="-1">All Time</button>
+    </div>
+  </header>
+
+  <section id="panel" role="tabpanel" aria-labelledby="tab-7">
+    <div class="stats" id="stats"></div>
+    <div class="chart-wrap">
+      <svg class="chart" id="chart" tabindex="0" role="img" aria-label="Contribution graph"></svg>
+      <div class="tip" id="tip" role="status" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <footer>
+    <span id="updated"></span>
+    <span><a href="https://github.com/Vaibhav-12521">GitHub profile</a> · <a href="https://vaibhav1.me">vaibhav1.me</a></span>
+  </footer>
+</main>
+
+<script>
+(() => {
+  const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const C = { white: "#fffaf2", mustard: "#e9c46a", orange: "#f4a261", coral: "#e76f51", teal: "#2a9d8f", deep: "#264653", muted: "#6b5a48" };
+  const NS = "http://www.w3.org/2000/svg";
+  const svg = document.getElementById("chart");
+  const tip = document.getElementById("tip");
+  const statsEl = document.getElementById("stats");
+  const tabs = [...document.querySelectorAll(".tab")];
+  const fmt = (n) => n.toLocaleString("en-US");
+  let data = [], range = "7", points = [], active = -1, geo = null;
+
+  const el = (name, attrs = {}, parent = svg) => {
+    const n = document.createElementNS(NS, name);
+    for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+    parent.appendChild(n);
+    return n;
+  };
+
+  function build(r) {
+    if (r === "all") {
+      const m = new Map();
+      for (const [d, v] of data) m.set(d.slice(0, 7), (m.get(d.slice(0, 7)) || 0) + v);
+      const keys = [...m.keys()];
+      return keys.map((k, i) => {
+        const [y, mo] = k.split("-").map(Number);
+        return { v: m.get(k), x: MONTHS[mo - 1], sub: mo === 1 || i === 0 ? String(y) : "", tip: `${MONTHS[mo - 1]} ${y}`, unit: "this month" };
+      });
+    }
+    return data.slice(-Number(r)).map(([d, v]) => {
+      const dt = new Date(d + "T12:00:00Z");
+      return { v, x: `${dt.getUTCDate()} ${MONTHS[dt.getUTCMonth()]}`, sub: r === "7" ? DAYS[dt.getUTCDay()] : "", tip: `${DAYS[dt.getUTCDay()]}, ${dt.getUTCDate()} ${MONTHS[dt.getUTCMonth()]} ${dt.getUTCFullYear()}`, unit: "that day" };
+    });
+  }
+
+  function stats(r, pts) {
+    const total = pts.reduce((t, p) => t + p.v, 0);
+    if (r === "all") {
+      const days = data.filter(([, v]) => v > 0).length;
+      const best = pts.reduce((b, p) => (p.v > b.v ? p : b), pts[0]);
+      return [[fmt(total), "total contributions"], [fmt(days), "active days"], [best.tip, "best month"]];
+    }
+    return [[fmt(total), "contributions"], [`${pts.filter((p) => p.v > 0).length}/${pts.length}`, "active days"], [fmt(Math.max(0, ...pts.map((p) => p.v))), "best day"]];
+  }
+
+  function draw() {
+    points = build(range);
+    statsEl.innerHTML = stats(range, points).map(([v, k]) => `<div class="stat"><b>${v}</b><span>${k}</span></div>`).join("");
+    const w = Math.max(320, svg.parentElement.clientWidth), h = Math.round(Math.min(420, Math.max(260, w * 0.42)));
+    const small = w < 600, font = small ? 12 : 14;
+    svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+    svg.replaceChildren();
+    const padL = 34, padR = 30, top = 40, base = h - (range === "7" || range === "all" ? 46 : 32);
+    const plotW = w - padL - padR, plotH = base - top;
+    const max = Math.max(1, ...points.map((p) => p.v));
+    const step = points.length > 1 ? plotW / (points.length - 1) : 0;
+    const X = (i) => padL + i * step, Y = (v) => top + plotH - (v / max) * plotH;
+    geo = { X, Y, step, top, base, w };
+
+    const defs = el("defs");
+    defs.innerHTML = `<filter id="sh" x="-5%" y="-20%" width="110%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#3b2a1a" flood-opacity=".28"/></filter>`;
+    for (const f of [0.25, 0.5, 0.75, 1]) el("line", { x1: padL, x2: w - padR, y1: base - f * plotH, y2: base - f * plotH, stroke: C.muted, "stroke-opacity": ".15", "stroke-dasharray": "4 6" });
+
+    const pts = points.map((p, i) => [X(i), Y(p.v)]);
+    let line = `M ${pts[0][0]} ${pts[0][1]}`;
+    for (let i = 1; i < pts.length; i++) {
+      const [xa, ya] = pts[i - 1], [xb, yb] = pts[i], mx = (xa + xb) / 2;
+      line += ` C ${mx} ${ya}, ${mx} ${yb}, ${xb} ${yb}`;
+    }
+    const area = `${line} L ${pts.at(-1)[0]} ${base} L ${pts[0][0]} ${base} Z`;
+    const layers = el("g");
+    for (const [dy, col, op] of [[-14, C.mustard, 1], [-7, C.orange, 1], [0, C.coral, .92]]) el("path", { d: area, fill: col, opacity: op, transform: `translate(0 ${dy})`, filter: "url(#sh)" }, layers);
+    layers.animate?.([{ transform: `translate(0 ${base}px) scale(1, 0) translate(0 ${-base}px)` }, { transform: "none" }], { duration: 600, easing: "cubic-bezier(.2,.8,.2,1)" });
+    el("path", { d: line, fill: "none", stroke: C.deep, "stroke-width": small ? 2.4 : 3, "stroke-linecap": "round" });
+
+    const every = range === "7" ? 1 : range === "30" ? (small ? 10 : 5) : Math.max(1, Math.ceil(points.length / (small ? 6 : 14)));
+    points.forEach((p, i) => {
+      el("circle", { cx: pts[i][0], cy: pts[i][1], r: p.v ? (small ? 4 : 5) : 2.5, fill: p.v ? C.white : C.deep, "fill-opacity": p.v ? 1 : .35, stroke: p.v ? C.deep : "none", "stroke-width": 2.2 });
+      const last = points.length - 1;
+      if ((i % every === 0 && (every === 1 || last - i >= every / 2)) || i === last) {
+        const anchor = i === last && points.length > 8 ? "end" : i === 0 && points.length > 8 ? "start" : "middle";
+        el("text", { x: X(i), y: base + 20, "text-anchor": anchor, "font-size": font, "font-weight": 700, fill: C.deep }).textContent = p.x;
+        if (p.sub) el("text", { x: X(i), y: base + 36, "text-anchor": anchor, "font-size": font - 2, fill: C.muted }).textContent = p.sub;
+      }
+    });
+
+    geo.guide = el("line", { y1: top - 10, y2: base, stroke: C.deep, "stroke-opacity": 0, "stroke-dasharray": "3 4" });
+    geo.ring = el("circle", { r: small ? 8 : 9, fill: "none", stroke: C.coral, "stroke-width": 3, opacity: 0 });
+    svg.setAttribute("aria-label", `Contribution graph, ${tabs.find((t) => t.dataset.range === range).textContent}. Use left and right arrow keys to read each point.`);
+    active = -1;
+    hide();
+  }
+
+  function show(i) {
+    if (!points.length) return;
+    active = Math.max(0, Math.min(points.length - 1, i));
+    const p = points[active], x = geo.X(active), y = geo.Y(p.v);
+    geo.guide.setAttribute("x1", x); geo.guide.setAttribute("x2", x); geo.guide.setAttribute("stroke-opacity", ".5");
+    geo.ring.setAttribute("cx", x); geo.ring.setAttribute("cy", y); geo.ring.setAttribute("opacity", 1);
+    const scale = svg.clientWidth / geo.w;
+    tip.innerHTML = `<b>${fmt(p.v)}</b> contribution${p.v === 1 ? "" : "s"} ${p.unit}<br>${p.tip}`;
+    const half = tip.offsetWidth / 2, px = Math.min(Math.max(x * scale, half + 4), svg.clientWidth - half - 4);
+    tip.style.left = `${px}px`;
+    tip.style.top = `${y * scale}px`;
+    tip.classList.add("show");
+  }
+  function hide() {
+    tip.classList.remove("show");
+    geo?.guide?.setAttribute("stroke-opacity", 0);
+    geo?.ring?.setAttribute("opacity", 0);
+  }
+
+  svg.addEventListener("pointermove", (e) => {
+    const r = svg.getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width) * geo.w;
+    show(Math.round((x - geo.X(0)) / (geo.step || 1)));
+  });
+  svg.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse") hide(); });
+  svg.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+      e.preventDefault();
+      show(active < 0 ? points.length - 1 : active + (e.key === "ArrowRight" ? 1 : -1));
+    } else if (e.key === "Escape") hide();
+  });
+  svg.addEventListener("blur", hide);
+
+  function select(tab, focus) {
+    for (const t of tabs) {
+      const on = t === tab;
+      t.setAttribute("aria-selected", on);
+      t.tabIndex = on ? 0 : -1;
+    }
+    document.getElementById("panel").setAttribute("aria-labelledby", tab.id);
+    range = tab.dataset.range;
+    try { history.replaceState(null, "", `#${range}`); } catch {}
+    if (focus) tab.focus();
+    draw();
+  }
+  tabs.forEach((t, i) => {
+    t.addEventListener("click", () => select(t));
+    t.addEventListener("keydown", (e) => {
+      const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if (d) { e.preventDefault(); select(tabs[(i + d + tabs.length) % tabs.length], true); }
+    });
+  });
+  let resizeTimer;
+  addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(draw, 120); });
+
+  fetch("contrib.json", { cache: "no-store" })
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((json) => {
+      data = json.days;
+      document.getElementById("updated").textContent = `Updated ${new Date(json.generated).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })}`;
+      const start = tabs.find((t) => `#${t.dataset.range}` === location.hash) || tabs[0];
+      select(start);
+    })
+    .catch(() => { document.getElementById("panel").innerHTML = `<p class="error">Couldn't load the contribution data. Please refresh.</p>`; });
+})();
+</script>
+</body>
+</html>

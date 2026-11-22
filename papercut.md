@@ -58,32 +58,16 @@
 <img src="https://raw.githubusercontent.com/Vaibhav-12521/Old-Profile-Readme-files/main/papercut-assets/now.svg?sanitize=true" alt="Currently: building client SaaS, exploring AI agents, open to full-time roles"/>
 </p>
 
-<details open>
-<summary><b>📅 Last 7 days</b></summary>
-<br/>
+<p>
+<a href="https://vaibhav-12521.github.io/Old-Profile-Readme-files/">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/Vaibhav-12521/Old-Profile-Readme-files/main/papercut-assets/contrib-7d-mobile.svg?sanitize=true">
-  <img src="https://raw.githubusercontent.com/Vaibhav-12521/Old-Profile-Readme-files/main/papercut-assets/contrib-7d.svg?sanitize=true" width="100%" alt="Contributions in the last 7 days, with the count on each day"/>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/Vaibhav-12521/Old-Profile-Readme-files/main/papercut-assets/contrib-mobile.svg?sanitize=true">
+  <img src="https://raw.githubusercontent.com/Vaibhav-12521/Old-Profile-Readme-files/main/papercut-assets/contrib.svg?sanitize=true" width="100%" alt="GitHub contributions for the last 7 days, 30 days and all time. Click to open the interactive graph."/>
 </picture>
-</details>
-
-<details>
-<summary><b>🗓️ Last 30 days</b></summary>
+</a>
 <br/>
-<picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/Vaibhav-12521/Old-Profile-Readme-files/main/papercut-assets/contrib-30d-mobile.svg?sanitize=true">
-  <img src="https://raw.githubusercontent.com/Vaibhav-12521/Old-Profile-Readme-files/main/papercut-assets/contrib-30d.svg?sanitize=true" width="100%" alt="Contributions in the last 30 days, with counts on active days"/>
-</picture>
-</details>
-
-<details>
-<summary><b>🌍 All time</b></summary>
-<br/>
-<picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/Vaibhav-12521/Old-Profile-Readme-files/main/papercut-assets/contrib-all-mobile.svg?sanitize=true">
-  <img src="https://raw.githubusercontent.com/Vaibhav-12521/Old-Profile-Readme-files/main/papercut-assets/contrib-all.svg?sanitize=true" width="100%" alt="All-time contributions by month, with monthly totals"/>
-</picture>
-</details>
+<a href="https://vaibhav-12521.github.io/Old-Profile-Readme-files/"><img src="https://raw.githubusercontent.com/Vaibhav-12521/Old-Profile-Readme-files/main/papercut-assets/btn-graph.svg?sanitize=true" alt="Explore the interactive graph"/></a>
+</p>
 
 <p>
 <img src="https://raw.githubusercontent.com/Vaibhav-12521/Old-Profile-Readme-files/main/papercut-assets/ribbon-contact.svg?sanitize=true" alt="Say hello"/>
