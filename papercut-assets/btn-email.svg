@@ -12,7 +12,9 @@
       <feColorMatrix values="0 0 0 0 .3  0 0 0 0 .22  0 0 0 0 .15  0 0 0 .09 0"/>
     </filter>
   </defs>
+  <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="2.4s" begin="0.7s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/>
   <g filter="url(#shb2)"><rect x="16" y="14" width="228" height="56" rx="28" fill="#f4a261" transform="translate(4 5)" opacity=".55"/></g>
   <g filter="url(#shb2)"><rect x="16" y="14" width="228" height="56" rx="28" fill="#fffaf2"/></g>
   <text x="130" y="51" text-anchor="middle" font-family="'Trebuchet MS','Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="800" fill="#f4a261"><tspan>✉️</tspan><tspan dx="10">email</tspan></text>
+  </g>
 </svg>

@@ -41,7 +41,10 @@ function hill(w, h, baseY, amp, waves, color, extra = "") {
 }
 
 const float = (dy, dur) => `<animateTransform attributeName="transform" type="translate" values="0 0;0 ${dy};0 0" dur="${dur}s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/>`;
-const cloud = (x, y, s) => `<g filter="url(#shs)" transform="translate(${x} ${y}) scale(${s})"><g>${float(4, 7 + s * 2)}<path d="M0 30 a22 22 0 0 1 30-22 a30 30 0 0 1 52 4 a20 20 0 0 1 22 18 z" fill="${C.white}"/></g></g>`;
+const sway = (deg, cx, cy, dur, delay = 0) => `<animateTransform attributeName="transform" type="rotate" values="${-deg} ${cx} ${cy};${deg} ${cx} ${cy};${-deg} ${cx} ${cy}" dur="${dur}s" begin="${delay}s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/>`;
+const bob = (dy, dur, delay = 0) => `<animateTransform attributeName="transform" type="translate" values="0 0;0 ${dy};0 0" dur="${dur}s" begin="${delay}s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/>`;
+const drift = (dx, dur) => `<animateTransform attributeName="transform" type="translate" values="0 0;${dx} 3;0 0" dur="${dur}s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/>`;
+const cloud = (x, y, s) => `<g filter="url(#shs)" transform="translate(${x} ${y}) scale(${s})"><g>${drift(26, 9 + s * 3)}<path d="M0 30 a22 22 0 0 1 30-22 a30 30 0 0 1 52 4 a20 20 0 0 1 22 18 z" fill="${C.white}"/></g></g>`;
 
 /* ---------- Header ---------- */
 function header() {
@@ -60,6 +63,10 @@ function header() {
   <rect width="${w}" height="${h}" rx="22" fill="${C.paper}"/>
   <clipPath id="clip"><rect width="${w}" height="${h}" rx="22"/></clipPath>
   <g clip-path="url(#clip)">
+    <g filter="url(#shs)" opacity=".9"><g>
+      <animateTransform attributeName="transform" type="rotate" from="0 960 128" to="360 960 128" dur="60s" repeatCount="indefinite"/>
+      ${Array.from({ length: 12 }, (_, i) => `<path d="M 960 128 L ${960 + 112 * Math.cos((i * 30 - 6) * Math.PI / 180)} ${128 + 112 * Math.sin((i * 30 - 6) * Math.PI / 180)} L ${960 + 112 * Math.cos((i * 30 + 6) * Math.PI / 180)} ${128 + 112 * Math.sin((i * 30 + 6) * Math.PI / 180)} Z" fill="${C.mustard}" opacity=".55"/>`).join("")}
+    </g></g>
     <g filter="url(#sh)"><g>${float(6, 9)}
       <circle cx="960" cy="128" r="74" fill="${C.mustard}"/>
       <circle cx="960" cy="128" r="52" fill="${C.orange}"/>
@@ -67,13 +74,20 @@ function header() {
     </g></g>
     ${cloud(760, 70, 1.1)}${cloud(1060, 200, 0.8)}${cloud(560, 40, 0.7)}
     ${layers.map(([y, a, wv, col, dy, dur]) => `<g filter="url(#sh)"><g>${float(dy, dur)}${hill(w, h, y, a, wv, col)}</g></g>`).join("\n    ")}
-    <g transform="rotate(-2.5 330 170)" filter="url(#sh)">
+    <g filter="url(#shs)">
+      <g>
+        <animateMotion dur="14s" repeatCount="indefinite" rotate="auto" path="M -80 150 C 200 40, 420 230, 640 110 S 1000 30, 1300 120"/>
+        <path d="M 0 0 L -34 -12 L -24 0 L -34 12 Z" fill="${C.white}"/>
+        <path d="M 0 0 L -24 0 L -34 12 Z" fill="#e6dccb"/>
+      </g>
+    </g>
+    <g transform="rotate(-2.5 330 170)" filter="url(#sh)"><g>${sway(1.2, 330, 70, 7)}
       <rect x="70" y="78" width="520" height="190" rx="6" fill="${C.white}"/>
       <rect x="250" y="62" width="150" height="34" fill="${C.mustard}" opacity=".75" transform="rotate(4 325 79)"/>
       <text x="100" y="168" font-family="${FONT}" font-size="64" font-weight="800" fill="${C.deep}" letter-spacing="1">Vaibhav Singh</text>
       <text x="102" y="214" font-family="${FONT}" font-size="25" font-weight="600" fill="${C.coral}">full-stack developer · lucknow, in</text>
       <text x="102" y="246" font-family="${FONT}" font-size="19" fill="#6b5a48">next.js · typescript · postgres · ai</text>
-    </g>
+    </g></g>
     ${grain(w, h)}
   </g>
 </svg>`;
@@ -102,10 +116,10 @@ function about() {
   <g filter="url(#sh)"><path d="${torn(30, 22, w - 60, h - 44)}" fill="${C.coral}" transform="rotate(.8 600 125) translate(6 6)"/></g>
   <g filter="url(#sh)"><path id="note" d="${torn(30, 22, w - 60, h - 44)}" fill="${C.white}"/></g>
   <clipPath id="noteclip"><use href="#note"/></clipPath>
-  <rect x="80" y="10" width="120" height="30" fill="${C.teal}" opacity=".6" transform="rotate(-6 140 25)"/>
+  <g transform="rotate(-6 140 25)"><rect x="80" y="10" width="120" height="30" fill="${C.teal}" opacity=".6"></rect></g>
   <rect x="1000" y="10" width="120" height="30" fill="${C.mustard}" opacity=".7" transform="rotate(5 1060 25)"/>
   <g font-family="${FONT}" font-size="27" fill="${C.ink}">
-    ${lines.map(([e, a, b, c], i) => `<text x="80" y="${78 + i * 46}"><tspan>${e}</tspan><tspan dx="14">${a}</tspan><tspan font-weight="800" fill="${C.coral}">${b}</tspan><tspan>${c}</tspan></text>`).join("\n    ")}
+    ${lines.map(([e, a, b, c], i) => `<text x="80" y="${78 + i * 46}"><tspan>${e}<animate attributeName="dy" values="0;-3;0" dur="2.4s" begin="${i * 0.4}s" repeatCount="indefinite"/></tspan><tspan dx="14">${a}</tspan><tspan font-weight="800" fill="${C.coral}">${b}</tspan><tspan>${c}</tspan></text>`).join("\n    ")}
   </g>
   <g clip-path="url(#noteclip)">${grain(w, h)}</g>
 </svg>`;
@@ -118,12 +132,14 @@ function ribbon(text, color, file) {
   const x = (w - tw) / 2;
   return [file, `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="${text}">
   ${defs()}
+  <g>${sway(1.4, 600, 55, 6)}
   <g filter="url(#sh)">
     <path d="M ${x - 60} 34 L ${x + 10} 34 L ${x + 10} 86 L ${x - 60} 86 L ${x - 36} 60 Z" fill="${C.deep}"/>
     <path d="M ${x + tw + 60} 34 L ${x + tw - 10} 34 L ${x + tw - 10} 86 L ${x + tw + 60} 86 L ${x + tw + 36} 60 Z" fill="${C.deep}"/>
   </g>
   <g filter="url(#sh)"><rect x="${x}" y="22" width="${tw}" height="56" rx="4" fill="${color}" transform="rotate(-1 600 50)"/></g>
   <text x="600" y="60" text-anchor="middle" font-family="${FONT}" font-size="31" font-weight="800" fill="${C.white}" letter-spacing="2" transform="rotate(-1 600 50)">${text}</text>
+  </g>
 </svg>`];
 }
 
@@ -148,16 +164,18 @@ function card([file, emoji, rawTitle, rawDesc, tag, color], i) {
   <clipPath id="c${id}"><rect x="14" y="10" width="${w - 28}" height="${h - 28}" rx="16"/></clipPath>
   <g filter="url(#sh${id})"><rect x="14" y="10" width="${w - 28}" height="${h - 28}" rx="16" fill="${C.white}"/></g>
   <g clip-path="url(#c${id})">
-    <g filter="url(#sh${id})">${hill(w, h, 172, 14, 2, layerCols[0])}</g>
-    <g filter="url(#sh${id})">${hill(w, h, 196, 12, 3, layerCols[1])}</g>
+    <g filter="url(#sh${id})"><g>${float(5, 6 + i * 0.7)}${hill(w, h, 172, 14, 2, layerCols[0])}</g></g>
+    <g filter="url(#sh${id})"><g>${float(4, 5 + i * 0.5)}${hill(w, h, 196, 12, 3, layerCols[1])}</g></g>
     ${grain(w, h, id)}
   </g>
   <g filter="url(#shs${id})"><circle cx="66" cy="62" r="30" fill="${C.paper}"/></g>
-  <text x="66" y="74" text-anchor="middle" font-size="32">${emoji}</text>
+  <text x="66" y="74" text-anchor="middle" font-size="32">${emoji}${bob(-4, 2.6, i * 0.3)}</text>
   <text x="112" y="58" font-family="${FONT}" font-size="27" font-weight="800" fill="${C.ink}">${title}</text>
   <text x="112" y="86" font-family="${FONT}" font-size="17" fill="#6b5a48">${desc}</text>
+  <g>${sway(3, 326, 122, 3.2, i * 0.25)}
   <g filter="url(#shs${id})" transform="rotate(-4 330 140)"><rect x="282" y="122" width="88" height="34" rx="5" fill="${C.paper}"/></g>
   <text x="326" y="145" text-anchor="middle" font-family="${FONT}" font-size="16" font-weight="800" fill="${C.deep}" transform="rotate(-4 330 140)">${tag} ↗</text>
+  </g>
 </svg>`];
 }
 
@@ -172,9 +190,11 @@ function button([file, emoji, label, color], i) {
   const w = 260, h = 90, id = `b${i}`;
   return [file, `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="${label}">
   ${defs(id)}
+  <g>${bob(-3, 2.4, i * 0.35)}
   <g filter="url(#sh${id})"><rect x="16" y="14" width="${w - 32}" height="56" rx="28" fill="${color}" transform="translate(4 5)" opacity=".55"/></g>
   <g filter="url(#sh${id})"><rect x="16" y="14" width="${w - 32}" height="56" rx="28" fill="${C.white}"/></g>
   <text x="${w / 2}" y="51" text-anchor="middle" font-family="${FONT}" font-size="22" font-weight="800" fill="${color === C.mustard ? C.deep : color}"><tspan>${emoji}</tspan><tspan dx="10">${label}</tspan></text>
+  </g>
 </svg>`];
 }
 
@@ -200,6 +220,7 @@ const files = [
   ["about", about()],
   ribbon("THINGS I'VE BUILT", C.coral, "ribbon-projects"),
   ribbon("MY TOOLBOX", C.teal, "ribbon-tools"),
+  ribbon("GITHUB STATS", C.coral, "ribbon-stats"),
   ribbon("SAY HELLO", C.orange, "ribbon-contact"),
   ...PROJECTS.map(card),
   ...BUTTONS.map(button),
