@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 110" width="1200" height="110" role="img" aria-label="MY TOOLBOX">
+  
+  <defs>
+    <filter id="sh" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#3b2a1a" flood-opacity=".32"/>
+    </filter>
+    <filter id="shs" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#3b2a1a" flood-opacity=".3"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 .3  0 0 0 0 .22  0 0 0 0 .15  0 0 0 .09 0"/>
+    </filter>
+  </defs>
+  <g filter="url(#sh)">
+    <path d="M 390 34 L 460 34 L 460 86 L 390 86 L 414 60 Z" fill="#264653"/>
+    <path d="M 810 34 L 740 34 L 740 86 L 810 86 L 786 60 Z" fill="#264653"/>
+  </g>
+  <g filter="url(#sh)"><rect x="450" y="22" width="300" height="56" rx="4" fill="#2a9d8f" transform="rotate(-1 600 50)"/></g>
+  <text x="600" y="60" text-anchor="middle" font-family="'Trebuchet MS','Segoe UI',Helvetica,Arial,sans-serif" font-size="31" font-weight="800" fill="#fffaf2" letter-spacing="2" transform="rotate(-1 600 50)">MY TOOLBOX</text>
+</svg>

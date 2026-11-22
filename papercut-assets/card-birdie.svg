@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250" role="img" aria-label="Birdie &amp; Cause: Stripe subscriptions">
+  
+  <defs>
+    <filter id="sh5" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#3b2a1a" flood-opacity=".32"/>
+    </filter>
+    <filter id="shs5" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#3b2a1a" flood-opacity=".3"/>
+    </filter>
+    <filter id="grain5">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 .3  0 0 0 0 .22  0 0 0 0 .15  0 0 0 .09 0"/>
+    </filter>
+  </defs>
+  <clipPath id="c5"><rect x="14" y="10" width="372" height="222" rx="16"/></clipPath>
+  <g filter="url(#sh5)"><rect x="14" y="10" width="372" height="222" rx="16" fill="#fffaf2"/></g>
+  <g clip-path="url(#c5)">
+    <g filter="url(#sh5)"><path d="M -20 270 L -20 179.01084734779357 C 50 179.01084734779357, 50 159.08862563357158, 100 159.08862563357158 C 150 159.08862563357158, 150 184.66897656231606, 200 184.66897656231606 C 250 184.66897656231606, 250 159.3109171540993, 300 159.3109171540993 C 350 159.3109171540993, 350 186.61539105326653, 400 186.61539105326653 L 420 186.61539105326653 L 420 270 Z" fill="#e9c46a" /></g>
+    <g filter="url(#sh5)"><path d="M -20 270 L -20 202.92351335777133 C 33.333333333333336 202.92351335777133, 33.333333333333336 184.51099593719047, 66.66666666666667 184.51099593719047 C 100 184.51099593719047, 100 202.0912836395629, 133.33333333333334 202.0912836395629 C 166.66666666666669 202.0912836395629, 166.66666666666669 189.39586986610473, 200 189.39586986610473 C 233.33333333333334 189.39586986610473, 233.33333333333334 203.6151603777032, 266.6666666666667 203.6151603777032 C 300 203.6151603777032, 300 187.99953194204696, 333.33333333333337 187.99953194204696 C 366.6666666666667 187.99953194204696, 366.6666666666667 207.06665001673002, 400 207.06665001673002 L 420 207.06665001673002 L 420 270 Z" fill="#e76f51" /></g>
+    <rect width="400" height="250" filter="url(#grain5)" pointer-events="none"/>
+  </g>
+  <g filter="url(#shs5)"><circle cx="66" cy="62" r="30" fill="#f6efe3"/></g>
+  <text x="66" y="74" text-anchor="middle" font-size="32">⛳</text>
+  <text x="112" y="58" font-family="'Trebuchet MS','Segoe UI',Helvetica,Arial,sans-serif" font-size="27" font-weight="800" fill="#1f2d33">Birdie &amp; Cause</text>
+  <text x="112" y="86" font-family="'Trebuchet MS','Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#6b5a48">Stripe subscriptions</text>
+  <g filter="url(#shs5)" transform="rotate(-4 330 140)"><rect x="282" y="122" width="88" height="34" rx="5" fill="#f6efe3"/></g>
+  <text x="326" y="145" text-anchor="middle" font-family="'Trebuchet MS','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="800" fill="#264653" transform="rotate(-4 330 140)">live ↗</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250" role="img" aria-label="SortMyScene: real-time seats, no doubles">
+  
+  <defs>
+    <filter id="sh2" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#3b2a1a" flood-opacity=".32"/>
+    </filter>
+    <filter id="shs2" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#3b2a1a" flood-opacity=".3"/>
+    </filter>
+    <filter id="grain2">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 .3  0 0 0 0 .22  0 0 0 0 .15  0 0 0 .09 0"/>
+    </filter>
+  </defs>
+  <clipPath id="c2"><rect x="14" y="10" width="372" height="222" rx="16"/></clipPath>
+  <g filter="url(#sh2)"><rect x="14" y="10" width="372" height="222" rx="16" fill="#fffaf2"/></g>
+  <g clip-path="url(#c2)">
+    <g filter="url(#sh2)"><path d="M -20 270 L -20 179.00828342922418 C 50 179.00828342922418, 50 160.18040502927286, 100 160.18040502927286 C 150 160.18040502927286, 150 180.73267301122317, 200 180.73267301122317 C 250 180.73267301122317, 250 158.36470037222128, 300 158.36470037222128 C 350 158.36470037222128, 350 180.0808440770399, 400 180.0808440770399 L 420 180.0808440770399 L 420 270 Z" fill="#e9c46a" /></g>
+    <g filter="url(#sh2)"><path d="M -20 270 L -20 206.23977383684357 C 33.333333333333336 206.23977383684357, 33.333333333333336 183.32112417021818, 66.66666666666667 183.32112417021818 C 100 183.32112417021818, 100 205.86607114293895, 133.33333333333334 205.86607114293895 C 166.66666666666669 205.86607114293895, 166.66666666666669 185.74230062502542, 200 185.74230062502542 C 233.33333333333334 185.74230062502542, 233.33333333333334 207.55339519751882, 266.6666666666667 207.55339519751882 C 300 207.55339519751882, 300 187.6869153011995, 333.33333333333337 187.6869153011995 C 366.6666666666667 187.6869153011995, 366.6666666666667 205.21453274004838, 400 205.21453274004838 L 420 205.21453274004838 L 420 270 Z" fill="#f4a261" /></g>
+    <rect width="400" height="250" filter="url(#grain2)" pointer-events="none"/>
+  </g>
+  <g filter="url(#shs2)"><circle cx="66" cy="62" r="30" fill="#f6efe3"/></g>
+  <text x="66" y="74" text-anchor="middle" font-size="32">🎟️</text>
+  <text x="112" y="58" font-family="'Trebuchet MS','Segoe UI',Helvetica,Arial,sans-serif" font-size="27" font-weight="800" fill="#1f2d33">SortMyScene</text>
+  <text x="112" y="86" font-family="'Trebuchet MS','Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#6b5a48">real-time seats, no doubles</text>
+  <g filter="url(#shs2)" transform="rotate(-4 330 140)"><rect x="282" y="122" width="88" height="34" rx="5" fill="#f6efe3"/></g>
+  <text x="326" y="145" text-anchor="middle" font-family="'Trebuchet MS','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="800" fill="#264653" transform="rotate(-4 330 140)">live ↗</text>
+</svg>

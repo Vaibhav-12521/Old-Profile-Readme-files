@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250" role="img" aria-label="Drone Survey: live telemetry on a map">
+  
+  <defs>
+    <filter id="sh1" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#3b2a1a" flood-opacity=".32"/>
+    </filter>
+    <filter id="shs1" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#3b2a1a" flood-opacity=".3"/>
+    </filter>
+    <filter id="grain1">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 .3  0 0 0 0 .22  0 0 0 0 .15  0 0 0 .09 0"/>
+    </filter>
+  </defs>
+  <clipPath id="c1"><rect x="14" y="10" width="372" height="222" rx="16"/></clipPath>
+  <g filter="url(#sh1)"><rect x="14" y="10" width="372" height="222" rx="16" fill="#fffaf2"/></g>
+  <g clip-path="url(#c1)">
+    <g filter="url(#sh1)"><path d="M -20 270 L -20 179.00742878970104 C 50 179.00742878970104, 50 157.7443314945066, 100 157.7443314945066 C 150 157.7443314945066, 150 182.22057182752553, 200 182.22057182752553 C 250 182.22057182752553, 250 158.04929477826192, 300 158.04929477826192 C 350 158.04929477826192, 350 180.702661751631, 400 180.702661751631 L 420 180.702661751631 L 420 270 Z" fill="#e9c46a" /></g>
+    <g filter="url(#sh1)"><path d="M -20 270 L -20 207.3451939965343 C 33.333333333333336 207.3451939965343, 33.333333333333336 187.7245002478941, 66.66666666666667 187.7245002478941 C 100 187.7245002478941, 100 207.1243336440643, 133.33333333333334 207.1243336440643 C 166.66666666666669 207.1243336440643, 166.66666666666669 184.52444421133234, 200 184.52444421133234 C 233.33333333333334 184.52444421133234, 233.33333333333334 206.46614013745736, 266.6666666666667 206.46614013745736 C 300 206.46614013745736, 300 187.58270975425035, 333.33333333333337 187.58270975425035 C 366.6666666666667 187.58270975425035, 366.6666666666667 206.99716031448784, 400 206.99716031448784 L 420 206.99716031448784 L 420 270 Z" fill="#2a9d8f" /></g>
+    <rect width="400" height="250" filter="url(#grain1)" pointer-events="none"/>
+  </g>
+  <g filter="url(#shs1)"><circle cx="66" cy="62" r="30" fill="#f6efe3"/></g>
+  <text x="66" y="74" text-anchor="middle" font-size="32">🛰️</text>
+  <text x="112" y="58" font-family="'Trebuchet MS','Segoe UI',Helvetica,Arial,sans-serif" font-size="27" font-weight="800" fill="#1f2d33">Drone Survey</text>
+  <text x="112" y="86" font-family="'Trebuchet MS','Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#6b5a48">live telemetry on a map</text>
+  <g filter="url(#shs1)" transform="rotate(-4 330 140)"><rect x="282" y="122" width="88" height="34" rx="5" fill="#f6efe3"/></g>
+  <text x="326" y="145" text-anchor="middle" font-family="'Trebuchet MS','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="800" fill="#264653" transform="rotate(-4 330 140)">live ↗</text>
+</svg>
